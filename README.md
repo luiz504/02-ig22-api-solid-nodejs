@@ -30,3 +30,17 @@ GymPass style app.
 - [ ] The app data should be persisted in a PostgreSQL DB;
 - [ ] All lists should be paginated with a maximum of 20 items per page;
 - [ ] The user should be identified by a JWT (JSON Web Token);
+
+## Dev Commands
+
+```bash
+docker compose up -d
+```
+
+```bash
+docker compose stop
+```
+
+```bash
+docker compose down
+```
