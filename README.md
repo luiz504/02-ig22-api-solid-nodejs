@@ -44,3 +44,10 @@ docker compose stop
 ```bash
 docker compose down
 ```
+
+## Solid
+
+- D - Dependency Inversion Principe
+
+  -- In this project one good example were this principle was used is at the `use-cases`, where they were builded with classes to receive the dependencies to its constructor, this will enables use to determine witch dependencies/implementations will be used
+  when instantiating the use-cases classes, this pattern will help us a lot to do unit testing or changing some dependencies in the future.
