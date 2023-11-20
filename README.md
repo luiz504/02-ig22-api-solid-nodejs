@@ -17,7 +17,7 @@ GymPass style app.
 
 ## BR (Business Requirements)
 
-- [ ] The user should not be able to sign in with a duplicated email address;
+- [x] The user should not be able to sign in with a duplicated email address;
 - [ ] The user should not be able to do more than two check-ins per day;
 - [ ] The user cannot do a check-in if they are more than 100 meters away from the gym;
 - [ ] The check-in can be validated within a maximum of 20 minutes after its creation;
@@ -26,8 +26,8 @@ GymPass style app.
 
 ## NFR (Non Functional Requirements)
 
-- [ ] The user password must be encrypted;
-- [ ] The app data should be persisted in a PostgreSQL DB;
+- [x] The user password must be encrypted;
+- [x] The app data should be persisted in a PostgreSQL DB;
 - [ ] All lists should be paginated with a maximum of 20 items per page;
 - [ ] The user should be identified by a JWT (JSON Web Token);
 
