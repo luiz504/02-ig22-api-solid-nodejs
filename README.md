@@ -4,8 +4,8 @@ GymPass style app.
 
 ## FR (Functional Requirements)
 
-- [ ] Should be possible to sign in;
-- [ ] Should be possible to log in;
+- [x] Should be possible to sign in;
+- [x] Should be possible to log in;
 - [ ] Should be possible to retrieve the profile data from a logged-in user;
 - [ ] Should be able to get the number of check-ins made by the logged-in user;
 - [ ] Should be able to get the check-in history from a logged-in user;
