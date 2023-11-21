@@ -45,9 +45,17 @@ docker compose stop
 docker compose down
 ```
 
-## Solid
+## Design Patterns
+
+### Solid
 
 - D - Dependency Inversion Principe
 
   -- In this project one good example were this principle was used is at the `use-cases`, where they were builded with classes to receive the dependencies to its constructor, this will enables use to determine witch dependencies/implementations will be used
   when instantiating the use-cases classes, this pattern will help us a lot to do unit testing or changing some dependencies in the future.
+
+### Repository
+
+### Factory
+
+This pattern is used here to abstract the process of instantiation of use-cases that some cases requires many other things.
