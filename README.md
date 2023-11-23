@@ -33,6 +33,8 @@ GymPass style app.
 
 ## Dev Commands
 
+### Docker-DB
+
 ```bash
 docker compose up -d
 ```
@@ -43,6 +45,20 @@ docker compose stop
 
 ```bash
 docker compose down
+```
+
+### scripts
+
+Run the Server dev mode
+
+```bash
+npm run start:dev
+```
+
+Build the server
+
+```bash
+npm run start:prod
 ```
 
 ## Design Patterns
