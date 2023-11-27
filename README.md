@@ -9,10 +9,10 @@ GymPass style app.
 - [x] Should be possible to retrieve the profile data from a logged-in user;
 - [x] Should be able to get the number of check-ins made by the logged-in user;
 - [x] Should be able to get the check-in history from a logged-in user;
-- [ ] The logged-in user should be able to find nearby gyms;
+- [x] The logged-in user should be able to find nearby gyms (max 10km distance);
 - [x] The logged-in user should be able to search for gyms by name;
 - [x] The logged-in user should be able to do check-in to a Gym;
-- [ ] Should be able to validate a check-in from a user;
+- [x] Should be able to validate a check-in from a user;
 - [x] Should be able to register a Gym;
 
 ## BR (Business Requirements)
@@ -20,7 +20,7 @@ GymPass style app.
 - [x] The user should not be able to sign in with a duplicated email address;
 - [x] The user should not be able to do more than two check-ins per day;
 - [x] The user cannot do a check-in if they are more than 100 meters away from the gym;
-- [ ] The check-in can be validated within a maximum of 20 minutes after its creation;
+- [x] The check-in can be validated within a maximum of 20 minutes after its creation;
 - [ ] The check-in can only be validated by admins;
 - [ ] The gyms can only be registered by admins;
 
@@ -30,6 +30,10 @@ GymPass style app.
 - [x] The app data should be persisted in a PostgreSQL DB;
 - [x] All lists should be paginated with a maximum of 20 items per page;
 - [ ] The user should be identified by a JWT (JSON Web Token);
+
+## Points to revise when finished the lessons
+
+- [ ] Implement pagination to fetch-nearby gyms use cases;
 
 ## Dev Commands
 
