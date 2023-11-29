@@ -6,12 +6,13 @@ const envSchema = z.object({
     .enum(['development', 'production', 'test'])
     .default('development'),
   PORT: z.coerce.number().default(3333),
+  JWT_SECRET: z.string(),
 })
 
 const _env = envSchema.safeParse(process.env)
 
 if (!_env.success) {
-  console.error('💢 Invalid environment variables', _env.error.format())
+  console.error('💢 Invalid environment variables', _env.error.format()) //eslint-disable-line
 
   throw new Error('Invalid environment variables')
 }
