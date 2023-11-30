@@ -8,4 +8,4 @@ services:
     environment:
       - POSTGRESQL_USERNAME=docker
       - POSTGRESQL_PASSWORD=docker
-      - POSTGRESSQL_DATABASE=api
+      - POSTGRESSQL_DATABASE=apisolid
