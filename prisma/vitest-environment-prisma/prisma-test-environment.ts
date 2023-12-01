@@ -15,6 +15,7 @@ function generateDatabaseURL(schema: string) {
   url.searchParams.set('schema', schema)
   return url.toString()
 }
+
 export default <Environment>{
   name: 'prisma',
   transformMode: 'web',
