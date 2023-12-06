@@ -4,13 +4,13 @@ import { makeFetchNearbyGymInUseCase } from '~/use-cases/factories/make-fetch-ne
 
 export async function nearby(request: FastifyRequest, reply: FastifyReply) {
   const nearbyGymsQuerySchema = z.object({
-    latitude: z.number().refine(
+    latitude: z.coerce.number().refine(
       (value) => {
         return Math.abs(value) <= 90
       },
       { message: 'Invalid latitude value.' },
     ),
-    longitude: z.number().refine(
+    longitude: z.coerce.number().refine(
       (value) => {
         return Math.abs(value) <= 180
       },
@@ -18,7 +18,7 @@ export async function nearby(request: FastifyRequest, reply: FastifyReply) {
     ),
   })
 
-  const { latitude, longitude } = nearbyGymsQuerySchema.parse(request.params)
+  const { latitude, longitude } = nearbyGymsQuerySchema.parse(request.query)
 
   const fetchNearbyGymUseCase = makeFetchNearbyGymInUseCase()
   const { gyms } = await fetchNearbyGymUseCase.execute({
