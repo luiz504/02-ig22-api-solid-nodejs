@@ -66,6 +66,21 @@ Build the server
 npm run start:prod
 ```
 
+### utils
+
+```bash
+  npx prisma migrate dev
+```
+
+create a new migrations if there is any change in the figma schema, and push it
+to the DB
+
+```bash
+  npx prisma studio
+```
+
+opens a web preview of the db
+
 ## Design Patterns
 
 ### Solid
