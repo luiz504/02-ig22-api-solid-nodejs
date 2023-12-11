@@ -6,6 +6,7 @@ import { Environment } from 'vitest'
 
 const prisma = new PrismaClient()
 function generateDatabaseURL(schema: string) {
+  console.log('dds', process.env.JWT_SECRET)
   console.log('dd', process.env.DATABASE_URL)
   if (!process.env.DATABASE_URL) {
     throw new Error('DATABASE_URL environment variable must be provided.')
