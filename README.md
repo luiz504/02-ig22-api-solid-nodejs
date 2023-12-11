@@ -105,6 +105,7 @@ CI => Continuous Integration
 
 - Github Actions
   - [x] Run unity tests when pushing code to github
+  - [x] Run integration tests when pull requests are made to github
 
 CD => Continuous Deployment/Delivery
 
