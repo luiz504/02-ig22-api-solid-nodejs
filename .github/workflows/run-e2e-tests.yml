@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      postigres:
+      postgres:
         image: bitnami/postgresql
         ports:
           - 5432:5432
@@ -18,9 +18,9 @@ jobs:
           POSTGRESSQL_DATABASE: apisolid
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "npm"
