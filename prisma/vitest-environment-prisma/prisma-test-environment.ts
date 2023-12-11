@@ -20,23 +20,25 @@ export default <Environment>{
   name: 'prisma',
   transformMode: 'web',
   async setup() {
+    const schema = randomUUID()
+
     try {
-      const schema = randomUUID()
       const databaseURL = generateDatabaseURL(schema)
 
       process.env.DATABASE_URL = databaseURL
 
       execSync('npx prisma migrate deploy')
-      return {
-        async teardown() {
-          await prisma.$executeRawUnsafe(
-            `DROP SCHEMA IF EXISTS "${schema}" CASCADE`,
-          )
-          await prisma.$disconnect()
-        },
-      }
     } catch (err) {
       console.log(err) //eslint-disable-line
+    }
+
+    return {
+      async teardown() {
+        await prisma.$executeRawUnsafe(
+          `DROP SCHEMA IF EXISTS "${schema}" CASCADE`,
+        )
+        await prisma.$disconnect()
+      },
     }
   },
 }
