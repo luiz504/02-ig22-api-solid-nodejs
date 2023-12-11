@@ -92,6 +92,20 @@ opens a web preview of the db
 
 ### Repository
 
+In this project was used this pattern to abstract some methods to interact with the
+Database, enabling the process to change or mock the database easily.
+
 ### Factory
 
 This pattern is used here to abstract the process of instantiation of use-cases that some cases requires many other things.
+
+## CI/CD
+
+CI => Continuous Integration
+
+- Github Actions
+  - [x] Run unity tests when pushing code to github
+
+CD => Continuous Deployment/Delivery
+
+not implemented
