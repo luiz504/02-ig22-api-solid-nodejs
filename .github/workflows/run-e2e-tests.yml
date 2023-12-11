@@ -9,7 +9,7 @@ jobs:
 
     services:
       postigres:
-        image: bitnami/postgresql:latest
+        image: bitnami/postgresql
         ports:
           - 5432:5432
         env:
@@ -29,5 +29,5 @@ jobs:
 
       - run: npm run test:e2e
         env:
-          JWT_SECRET: "test-secret"
+          JWT_SECRET: testingsecret
           DATABASE_URL: "postgresql://docker:docker@localhost:5432/apisolid?schema=public"
