@@ -13,6 +13,7 @@ function generateDatabaseURL(schema: string) {
   }
 
   const url = new URL(process.env.DATABASE_URL)
+  console.log('url', url)
 
   url.searchParams.set('schema', schema)
   return url.toString()
