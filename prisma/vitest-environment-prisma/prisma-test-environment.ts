@@ -18,19 +18,15 @@ function generateDatabaseURL(schema: string) {
 
 export default <Environment>{
   name: 'prisma',
-  transformMode: 'web',
+  transformMode: 'ssr',
   async setup() {
     const schema = randomUUID()
 
-    try {
-      const databaseURL = generateDatabaseURL(schema)
+    const databaseURL = generateDatabaseURL(schema)
 
-      process.env.DATABASE_URL = databaseURL
+    process.env.DATABASE_URL = databaseURL
 
-      execSync('npx prisma migrate deploy')
-    } catch (err) {
-      console.log(err) //eslint-disable-line
-    }
+    execSync('npx prisma migrate deploy')
 
     return {
       async teardown() {
