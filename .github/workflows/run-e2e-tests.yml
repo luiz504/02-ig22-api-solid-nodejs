@@ -31,4 +31,4 @@ jobs:
       - run: npm run test:e2e
         env:
           JWT_SECRET: testingsecret
-          DATABASE_URL: "https:djqhuhjwqw.qwiodqiwhdh"
+          DATABASE_URL: postgresql://docker:docker@localhost:5432/apisolid?schema=public
