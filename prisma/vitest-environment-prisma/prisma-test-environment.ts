@@ -7,9 +7,11 @@ import { Environment } from 'vitest'
 const prisma = new PrismaClient()
 function generateDatabaseURL(schema: string) {
   let envURL = process.env.DATABASE_URL
+  console.log('default', { env: process.env.DATABASE_URL, envURL })
 
   if (process.env.NODE_ENV === 'ci') {
     envURL = 'postgresql://docker:docker@localhost:5432/apisolid?schema=public'
+    console.log('ci', { env: process.env.DATABASE_URL, envURL })
   }
 
   if (!process.env.DATABASE_URL && process.env.NODE_ENV !== 'ci') {
