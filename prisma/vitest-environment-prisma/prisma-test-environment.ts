@@ -22,6 +22,7 @@ export default <Environment>{
   async setup() {
     const schema = randomUUID()
     const databaseURL = generateDatabaseURL(schema)
+    console.log('ddd', process.env.DATABASE_URL)
 
     process.env.DATABASE_URL = databaseURL
 
